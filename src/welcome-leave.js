@@ -168,7 +168,7 @@ module.exports = class WelcomeLeave {
      */
   setTitle(text, color = "#fff") {
     if (text) {
-      if (text.length > 20) throw new Error("The maximum size of the title is 20 characters.");
+      if (text.length > 50) throw new Error("The maximum size of the title is 20 characters.");
       this.title.data = text;
       if (color) {
         if (/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/.test(color)) {
@@ -302,4 +302,5 @@ module.exports = class WelcomeLeave {
 
     return canvas.toBuffer('image/png');
   }
+
 };
